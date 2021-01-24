@@ -1,67 +1,41 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
-const foodILike = [
-  {
-    id: 1,
-    name: "Kimchi",
-    image: "https://www.maangchi.com/wp-content/uploads/2019/11/vegankimchi-insta.jpg",
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Pizza",
-    image: "https://www.qsrmagazine.com/sites/default/files/styles/story_page/public/2020-03/PizzaHutDelivery.jpg?itok=zx4HB4fD",
-    rating: 4.9
-  },
-  {
-    id: 3,
-    name: "Hamburger",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/1200px-RedDot_Burger.jpg",
-    rating: 4.8
-  },
-  {
-    id: 4,
-    name: "galbi",
-    image: "https://www.koreanbapsang.com/wp-content/uploads/2013/08/DSC_1834-1-e1562125117513.jpg",
-    rating: 4.7
+class App extends React.Component{ // React.component로 부터 상속 받는다.
+  constructor(props) {
+    super(props);
+    console.log("Hello");
   }
-];
-
-function Food({ name, picture, rating }) { // 나중에 이해가 안되면 props 다시 알기
-  return (
-    <div>
-      <h2>I like {name}</h2>
-      <h4>{rating}/5.0</h4>
-      <img src={picture} alt={name} />
-    </div>
-  )
+  state = {
+    count: 0
+  };
+    add = () => {
+      this.setState(current => ({ count: current.count + 1 }));
+    };
+    minus = () => {
+      this.setState(current => ({ count: current.count - 1 }));
+    };
+    componentDidMount() {
+      console.log("component rendered");
+    }
+    // 매순간 setState를 호출할때마다 state와 render function을 호출할 것이다.
+    componentDidUpdate(){
+      console.log("I just updated");
+    }
+    componentWillUnmount() { // component가 떠날 때 호출이 된다.
+      console.log("Goodbye, Cruel world");
+    }
+    render(){
+      console.log("I'm rendering");
+    // state는 Object이고 component의 data 넣을 공간이 존재하고 이 data는 변한다.
+    return (
+      <div>
+        <h1>The Number is: {this.state.count}</h1>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    )
+  };
 }
-
-//npm install을 설치 해줘야 propTypes를 사용가능 하다.
-//이름은 무조건 PropTypes로 지어야 한다.
-Food.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  rating: PropTypes.number
-};
-
-function App() {
-  return (
-    <div>
-      {foodILike.map(dish => (
-        <Food 
-          key={dish.id} 
-          name={dish.name} 
-          picture={dish.image}
-          rating={dish.rating}
-        /> 
-      //dish = Object {Kimchi.object, Pizza.object.. // object.name? object.image}
-    ))}
-      {/* <Food fav="kimchi"/> */}  {/*<- props /// JSX look like html */}
-      {/*foodILike = text, {foodILike} = javascript */}
-    </div>
-  )
-}
+// react는 자동적으로 나의 class component의 render method를 실행한다.
 
 export default App;
