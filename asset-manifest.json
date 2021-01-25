@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sangmokchae/movie_app/static/css/main.580fe46e.chunk.css",
+    "main.js": "/sangmokchae/movie_app/static/js/main.8d7f5e57.chunk.js",
+    "main.js.map": "/sangmokchae/movie_app/static/js/main.8d7f5e57.chunk.js.map",
+    "runtime-main.js": "/sangmokchae/movie_app/static/js/runtime-main.564cdca0.js",
+    "runtime-main.js.map": "/sangmokchae/movie_app/static/js/runtime-main.564cdca0.js.map",
+    "static/js/2.da4374dc.chunk.js": "/sangmokchae/movie_app/static/js/2.da4374dc.chunk.js",
+    "static/js/2.da4374dc.chunk.js.map": "/sangmokchae/movie_app/static/js/2.da4374dc.chunk.js.map",
+    "index.html": "/sangmokchae/movie_app/index.html",
+    "static/css/main.580fe46e.chunk.css.map": "/sangmokchae/movie_app/static/css/main.580fe46e.chunk.css.map",
+    "static/js/2.da4374dc.chunk.js.LICENSE.txt": "/sangmokchae/movie_app/static/js/2.da4374dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.564cdca0.js",
+    "static/js/2.da4374dc.chunk.js",
+    "static/css/main.580fe46e.chunk.css",
+    "static/js/main.8d7f5e57.chunk.js"
+  ]
+}
