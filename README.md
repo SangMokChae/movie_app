@@ -5,3 +5,5 @@
 # Movie App 2019
 
 React JS fundamentals course (2021!!!)
+
+### npm i gh-pages / git remote -v
